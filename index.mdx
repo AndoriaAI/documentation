@@ -27,7 +27,7 @@ Andoria Takes in the following query parameters
   ```
 </ParamField>
 
-<ParamField path="streaming" type="boolean">
+<ParamField path="stream" type="boolean">
   Whether you want to stream the result. If not provided, will default to false.
 </ParamField>
 
@@ -57,7 +57,7 @@ curl -X POST https://api.andoria.ai/query \
   -H "Content-Type: application/json" \
   -d '{
     "query": "I can't log in to my shifts",
-    "streaming": false
+    "stream": false
   }'
 ```
 
