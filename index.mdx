@@ -53,12 +53,21 @@ Andoria Takes in the following query parameters
 <CodeGroup>
 
 ```bash cURL
+# with streaming
+
 curl -X POST https://api.andoria.ai/query \
   -H "Content-Type: application/json" \
-  -d '{
-    "query": "I can't log in to my shifts",
-    "stream": false
-  }'
+  -d '{"query": "I can'\''t log in to my shifts", "stream": true}' \
+  --no-buffer
+```
+
+
+```bash cURL
+# without streaming
+
+curl -X POST https://api.andoria.ai/query \
+  -H "Content-Type: application/json" \
+  -d '{"query": "I can'\''t log in to my shifts", "stream": false}'
 ```
 
 
