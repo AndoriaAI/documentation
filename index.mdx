@@ -1,8 +1,8 @@
 ---
-title: "Welcome to the Andoria API"
+title: "Welcome to the Andoria API (For Clipboard Only)"
 ---
 
-Welcome to the Andoria API~ The Andoria API is accessible through our main query endpoint at:
+Welcome to the Andoria API- The Andoria API is accessible through our main query endpoint at:
 
 ```json
 https://api.andoria.ai/query
@@ -70,10 +70,7 @@ const response = await fetch('https://api.andoria.ai/query', {
   },
   body: JSON.stringify({
     query: 'Your query here',
-    parameters: {
-      max_results: 10,
-      include_metadata: true
-    }
+    stream: true
   })
 });
 
